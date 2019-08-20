@@ -22,20 +22,20 @@ file.close()
 def add_dino():
 	global dinos_print
 	rand_dino = randrange(0,len(dino_list))
-	print "Dino number: %d" % rand_dino
+	#print "Dino number: %d" % rand_dino
 	dinos_print.append(dino_list[rand_dino])
 	if (len(dinos_print) < 30):
-		for x in range (len(dinos_print)):
-			print(dinos_print[x])
-			print ("\n")
+		#for x in range (len(dinos_print)):
+		#	print(dinos_print[x])
+		print (dino_list[rand_dino])
 	else:
-		dinos_print = " "
-		print ("cleared")
+		dinos_print = []
+		print ("cleared\n")
 
 def main():
 	print ("Dino Database\n")
 	while True:
 		add_dino()
-		time.sleep (30)
+		time.sleep (5)
 
 main()
